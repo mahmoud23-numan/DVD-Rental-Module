@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="address_view_tree" model="ir.ui.view">
+            <field name="name">address_view_tree</field>
+            <field name="model">dvd_rental.address</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="address"/>
+                    <field name="address2" optional="hide"/>
+                    <field name="city_id" optional="hide"/>
+                    <field name="postal_code" optional="show"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+        <record id="address_view_form" model="ir.ui.view">
+            <field name="name">address_view_form</field>
+            <field name="model">dvd_rental.address</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group string="Imp Info!">
+                                <field name="address"/>
+                                <field name="address2" />
+                                <field name="city_id" />
+                                <field name="postal_code" />
+                                <field name="phone"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                        <field name="activity_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="address_view_menu_action" model="ir.actions.act_window">
+            <field name="name">address_view_menu_action</field>
+            <field name="res_model">dvd_rental.address</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Your First Record !
+                </p>
+            </field>
+        </record>
+        <menuitem
+            id="address_view_menu"
+            name="Addresses"
+            sequence="2"
+            parent="customers_main_menu"
+            action="address_view_menu_action"
+        />
+    </data>
+</odoo>

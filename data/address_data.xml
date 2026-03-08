@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="addr_1" model="dvd_rental.address">
+            <field name="address">47 MySakila Drive</field>
+            <field name="postal_code">30012</field>
+        </record>
+        <record id="addr_2" model="dvd_rental.address">
+            <field name="address">28 MySQL Boulevard</field>
+            <field name="postal_code">57651</field>
+        </record>
+        <record id="addr_3" model="dvd_rental.address">
+            <field name="address">23 Workhaven Lane</field>
+            <field name="postal_code">30089</field>
+            <field name="phone">14033335568</field>
+        </record>
+        <record id="addr_4" model="dvd_rental.address">
+            <field name="address">1411 Lillydale Drive</field>
+            <field name="postal_code">57654</field>
+            <field name="phone">16172235589</field>
+        </record>
+        <record id="addr_5" model="dvd_rental.address">
+            <field name="address">1913 Hanoi Way</field>
+            <field name="postal_code">46300</field>
+            <field name="phone">28303384290</field>
+        </record>
+        <record id="addr_6" model="dvd_rental.address">
+            <field name="address">1121 Loja Avenue</field>
+            <field name="postal_code">44989</field>
+            <field name="phone">38635286649</field>
+        </record>
+        <record id="addr_7" model="dvd_rental.address">
+            <field name="address">692 Joliet Street</field>
+            <field name="postal_code">38654</field>
+            <field name="phone">44847719040</field>
+        </record>
+        <record id="addr_8" model="dvd_rental.address">
+            <field name="address">1566 Inegl Manor</field>
+            <field name="postal_code">34987</field>
+            <field name="phone">05814003527</field>
+        </record>
+        <record id="addr_9" model="dvd_rental.address">
+            <field name="address">53 Idfu Parkway</field>
+            <field name="postal_code">36188</field>
+            <field name="phone">10655648674</field>
+        </record>
+        <record id="addr_10" model="dvd_rental.address">
+            <field name="address">1795 Santiago de Compostela Way</field>
+            <field name="postal_code">29599</field>
+            <field name="phone">60452626434</field>
+        </record>
+        <record id="addr_11" model="dvd_rental.address">
+            <field name="address">900 Santiago de Compostela Parkway</field>
+            <field name="postal_code">28054</field>
+            <field name="phone">71657122037</field>
+        </record>
+        <record id="addr_12" model="dvd_rental.address">
+            <field name="address">478 Joliet Way</field>
+            <field name="postal_code">20054</field>
+            <field name="phone">57282285970</field>
+        </record>
+        <record id="addr_13" model="dvd_rental.address">
+            <field name="address">613 Korolev Drive</field>
+            <field name="postal_code">32954</field>
+            <field name="phone">80657522649</field>
+        </record>
+        <record id="addr_14" model="dvd_rental.address">
+            <field name="address">1531 Sal Drive</field>
+            <field name="postal_code">16251</field>
+            <field name="phone">64885693618</field>
+        </record>
+        <record id="addr_15" model="dvd_rental.address">
+            <field name="address">1542 Tarlac Parkway</field>
+            <field name="postal_code">44081</field>
+            <field name="phone">35297277345</field>
+        </record>
+        <record id="addr_16" model="dvd_rental.address">
+            <field name="address">808 Bhopal Manor</field>
+            <field name="postal_code">58255</field>
+            <field name="phone">46588780701</field>
+        </record>
+        <record id="addr_17" model="dvd_rental.address">
+            <field name="address">270 Amroha Parkway</field>
+            <field name="postal_code">38444</field>
+            <field name="phone">95479687538</field>
+        </record>
+        <record id="addr_18" model="dvd_rental.address">
+            <field name="address">770 Bydgoszcz Avenue</field>
+            <field name="postal_code">12044</field>
+            <field name="phone">51733831423</field>
+        </record>
+        <record id="addr_19" model="dvd_rental.address">
+            <field name="address">419 Iligan Lane</field>
+            <field name="postal_code">76555</field>
+            <field name="phone">99091110754</field>
+        </record>
+        <record id="addr_20" model="dvd_rental.address">
+            <field name="address">360 Toulouse Parkway</field>
+            <field name="postal_code">49544</field>
+            <field name="phone">94931233337</field>
+        </record>
+    </data>
+</odoo>

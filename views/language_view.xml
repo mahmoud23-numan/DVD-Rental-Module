@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="language_view_tree" model="ir.ui.view">
+            <field name="name">language_view_tree</field>
+            <field name="model">dvd_rental.language</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="language_view_form" model="ir.ui.view">
+            <field name="name">language_view_form</field>
+            <field name="model">dvd_rental.language</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                        <field name="activity_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="language_view_menu_action" model="ir.actions.act_window">
+            <field name="name">language_view_menu_action</field>
+            <field name="res_model">dvd_rental.language</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Your First Record !
+                </p>
+            </field>
+        </record>
+        <menuitem
+            id="languages_view_menu"
+            name="Languages"
+            sequence="4"
+            parent="catalog_main_menu"
+            action="language_view_menu_action"
+        />
+    </data>
+</odoo>

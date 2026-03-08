@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="payment_view_tree" model="ir.ui.view">
+            <field name="name">payment_view_tree</field>
+            <field name="model">dvd_rental.payment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="customer_id"/>
+                    <field name="staff_id"/>
+                    <field name="rental_id"/>
+                    <field name="amount" widget="monetary" />
+                    <field name="payment_date"/>
+                </tree>
+            </field>
+        </record>
+        <record id="payment_view_form" model="ir.ui.view">
+            <field name="name">payment_view_form</field>
+            <field name="model">dvd_rental.payment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="customer_id"/>
+                            <field name="staff_id"/>
+                            <field name="rental_id"/>
+                            <field name="amount" widget="monetary" />
+                            <field name="payment_date"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                        <field name="activity_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="payment_view_menu_action" model="ir.actions.act_window">
+            <field name="name">payment_view_menu_action</field>
+            <field name="res_model" >dvd_rental.payment</field>
+            <field name="help" type="xml">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Your First Record!
+                </p>
+            </field>
+        </record>
+        <menuitem
+            id="payment_view_menu"
+            name="Payments"
+            sequence="2"
+            parent="rentals_main_menu"
+            action="payment_view_menu_action"
+            />
+    </data>
+</odoo>

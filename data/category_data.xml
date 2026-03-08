@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="category_action" model="dvd_rental.category">
+            <field name="name">Action</field>
+        </record>
+        <record id="category_animation" model="dvd_rental.category">
+            <field name="name">Animation</field>
+        </record>
+        <record id="category_children" model="dvd_rental.category">
+            <field name="name">Children</field>
+        </record>
+        <record id="category_classics" model="dvd_rental.category">
+            <field name="name">Classics</field>
+        </record>
+        <record id="category_comedy" model="dvd_rental.category">
+            <field name="name">Comedy</field>
+        </record>
+        <record id="category_documentary" model="dvd_rental.category">
+            <field name="name">Documentary</field>
+        </record>
+        <record id="category_drama" model="dvd_rental.category">
+            <field name="name">Drama</field>
+        </record>
+        <record id="category_family" model="dvd_rental.category">
+            <field name="name">Family</field>
+        </record>
+        <record id="category_foreign" model="dvd_rental.category">
+            <field name="name">Foreign</field>
+        </record>
+        <record id="category_games" model="dvd_rental.category">
+            <field name="name">Games</field>
+        </record>
+        <record id="category_horror" model="dvd_rental.category">
+            <field name="name">Horror</field>
+        </record>
+        <record id="category_music" model="dvd_rental.category">
+            <field name="name">Music</field>
+        </record>
+        <record id="category_new" model="dvd_rental.category">
+            <field name="name">New</field>
+        </record>
+        <record id="category_sci_fi" model="dvd_rental.category">
+            <field name="name">Sci-Fi</field>
+        </record>
+        <record id="category_sports" model="dvd_rental.category">
+            <field name="name">Sports</field>
+        </record>
+        <record id="category_travel" model="dvd_rental.category">
+            <field name="name">Travel</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_create,perm_read,perm_write,perm_unlink
+access_dvd_rental_category,access_dvd_rental_category,model_dvd_rental_category,,1,1,1,1
+access_dvd_rental_language,access_dvd_rental_language,model_dvd_rental_language,,1,1,1,1
+access_dvd_rental_film,access_dvd_rental_film,model_dvd_rental_film,,1,1,1,1
+access_dvd_rental_special_feature,access_dvd_rental_special_feature,model_dvd_rental_special_feature,,1,1,1,1
+access_dvd_rental_country,access_dvd_rental_country,model_dvd_rental_country,,1,1,1,1
+access_dvd_rental_customer,access_dvd_rental_customer,model_dvd_rental_customer,,1,1,1,1
+access_dvd_rental_city,access_dvd_rental_city,model_dvd_rental_city,,1,1,1,1
+access_dvd_rental_address,access_dvd_rental_address,model_dvd_rental_address,,1,1,1,1
+access_dvd_rental_staff,access_dvd_rental_staff,model_dvd_rental_staff,,1,1,1,1
+access_dvd_rental_store,access_dvd_rental_store,model_dvd_rental_store,,1,1,1,1
+access_dvd_rental_inventory,access_dvd_rental_inventory,model_dvd_rental_inventory,,1,1,1,1
+access_dvd_rental_actor,access_dvd_rental_actor,model_dvd_rental_actor,,1,1,1,1
+access_dvd_rental_rental,access_dvd_rental_rental,model_dvd_rental_rental,,1,1,1,1
+access_dvd_rental_payment,access_dvd_rental_payment,model_dvd_rental_payment,,1,1,1,1

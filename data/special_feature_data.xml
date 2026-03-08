@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="feature_trailers" model="dvd_rental.special_feature">
+            <field name="name">Trailers</field>
+        </record>
+        <record id="feature_deleted" model="dvd_rental.special_feature">
+            <field name="name">Deleted Scenes</field>
+        </record>
+        <record id="feature_behind" model="dvd_rental.special_feature">
+            <field name="name">Behind the Scenes</field>
+        </record>
+    </data>
+</odoo>

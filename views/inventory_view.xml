@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="inventory_view_tree">
+            <field name="name">inventory_view_tree</field>
+            <field name="model">dvd_rental.inventory</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="film_id"/>
+                    <field name="store_id"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="inventory_view_form">
+            <field name="name">inventory_view_form</field>
+            <field name="model">dvd_rental.inventory</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="film_id"/>
+                            <field name="store_id"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                        <field name="activity_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="inventory_view_menu_action" model="ir.actions.act_window">
+            <field name="name">store_view_menu_action</field>
+            <field name="res_model">dvd_rental.inventory</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Your First Record!
+                </p>
+            </field>
+        </record>
+        <menuitem
+            id="inventory_view_menu"
+            name="Inventory"
+            sequence="1"
+            parent="inventory_main_menu"
+            action="inventory_view_menu_action"/>
+    </data>
+</odoo>

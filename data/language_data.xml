@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="lang_english" model="dvd_rental.language">
+            <field name="name">English</field>
+        </record>
+        <record id="lang_italian" model="dvd_rental.language">
+            <field name="name">Italian</field>
+        </record>
+        <record id="lang_japanese" model="dvd_rental.language">
+            <field name="name">Japanese</field>
+        </record>
+        <record id="lang_mandarin" model="dvd_rental.language">
+            <field name="name">Mandarin</field>
+        </record>
+        <record id="lang_french" model="dvd_rental.language">
+            <field name="name">French</field>
+        </record>
+        <record id="lang_german" model="dvd_rental.language">
+            <field name="name">German</field>
+        </record>
+    </data>
+</odoo>

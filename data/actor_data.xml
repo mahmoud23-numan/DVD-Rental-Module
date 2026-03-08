@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="actor_1" model="dvd_rental.actor">
+            <field name="first_name">Penelope</field>
+            <field name="last_name">Guiness</field>
+        </record>
+        <record id="actor_2" model="dvd_rental.actor">
+            <field name="first_name">Nick</field>
+            <field name="last_name">Wahlberg</field>
+        </record>
+        <record id="actor_3" model="dvd_rental.actor">
+            <field name="first_name">Ed</field>
+            <field name="last_name">Chase</field>
+        </record>
+        <record id="actor_4" model="dvd_rental.actor">
+            <field name="first_name">Jennifer</field>
+            <field name="last_name">Davis</field>
+        </record>
+        <record id="actor_5" model="dvd_rental.actor">
+            <field name="first_name">Johnny</field>
+            <field name="last_name">Lollobrigida</field>
+        </record>
+        <record id="actor_6" model="dvd_rental.actor">
+            <field name="first_name">Bette</field>
+            <field name="last_name">Nicholson</field>
+        </record>
+        <record id="actor_7" model="dvd_rental.actor">
+            <field name="first_name">Grace</field>
+            <field name="last_name">Mostel</field>
+        </record>
+        <record id="actor_8" model="dvd_rental.actor">
+            <field name="first_name">Matthew</field>
+            <field name="last_name">Johansson</field>
+        </record>
+        <record id="actor_9" model="dvd_rental.actor">
+            <field name="first_name">Joe</field>
+            <field name="last_name">Swank</field>
+        </record>
+        <record id="actor_10" model="dvd_rental.actor">
+            <field name="first_name">Christian</field>
+            <field name="last_name">Gable</field>
+        </record>
+    </data>
+</odoo>

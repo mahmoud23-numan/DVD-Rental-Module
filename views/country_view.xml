@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="country_view_tree" model="ir.ui.view">
+            <field name="name">country_view_tree</field>
+            <field name="model">dvd_rental.country</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="country_view_form" model="ir.ui.view">
+            <field name="name">country_view_form</field>
+            <field name="model">dvd_rental.country</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group string="Imp Info!">
+                                <field name="country_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                        <field name="activity_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="country_view_menu_action" model="ir.actions.act_window">
+            <field name="name">country_view_menu_action</field>
+            <field name="res_model">dvd_rental.country</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Your First Record !
+                </p>
+            </field>
+        </record>
+        <menuitem
+            id="country_view_menu"
+            name="Countries"
+            sequence="4"
+            parent="customers_main_menu"
+            action="country_view_menu_action"
+        />
+    </data>
+</odoo>

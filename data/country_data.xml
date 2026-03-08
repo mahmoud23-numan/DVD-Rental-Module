@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="country_1" model="dvd_rental.country">
+            <field name="country_id" ref="base.af"/>
+        </record>
+        <record id="country_2" model="dvd_rental.country">
+            <field name="country_id" ref="base.dz"/>
+        </record>
+        <record id="country_3" model="dvd_rental.country">
+            <field name="country_id" ref="base.as"/>
+        </record>
+        <record id="country_4" model="dvd_rental.country">
+            <field name="country_id" ref="base.ao"/>
+        </record>
+        <record id="country_5" model="dvd_rental.country">
+            <field name="country_id" ref="base.ai"/>
+        </record>
+        <record id="country_6" model="dvd_rental.country">
+            <field name="country_id" ref="base.ar"/>
+        </record>
+        <record id="country_7" model="dvd_rental.country">
+            <field name="country_id" ref="base.am"/>
+        </record>
+        <record id="country_8" model="dvd_rental.country">
+            <field name="country_id" ref="base.au"/>
+        </record>
+        <record id="country_9" model="dvd_rental.country">
+            <field name="country_id" ref="base.at"/>
+        </record>
+        <record id="country_10" model="dvd_rental.country">
+            <field name="country_id" ref="base.az"/>
+        </record>
+
+        <record id="country_21" model="dvd_rental.country">
+            <field name="country_id" ref="base.eg"/>
+        </record>
+        <record id="country_22" model="dvd_rental.country">
+            <field name="country_id" ref="base.ee"/>
+        </record>
+        <record id="country_23" model="dvd_rental.country">
+            <field name="country_id" ref="base.et"/>
+        </record>
+        <record id="country_24" model="dvd_rental.country">
+            <field name="country_id" ref="base.fo"/>
+        </record>
+        <record id="country_25" model="dvd_rental.country">
+            <field name="country_id" ref="base.fi"/>
+        </record>
+            <record id="country_26" model="dvd_rental.country">
+        <field name="country_id" ref="base.fr"/>
+            </record> <record id="country_27" model="dvd_rental.country">
+        <field name="country_id" ref="base.gf"/>
+        </record>
+        <record id="country_28" model="dvd_rental.country">
+            <field name="country_id" ref="base.pf"/>
+        </record>
+        <record id="country_29" model="dvd_rental.country">
+            <field name="country_id" ref="base.gm"/>
+        </record>
+        <record id="country_30" model="dvd_rental.country">
+            <field name="country_id" ref="base.de"/>
+        </record>
+        <record id="country_31" model="dvd_rental.country">
+            <field name="country_id" ref="base.gr"/>
+        </record>
+        <record id="country_32" model="dvd_rental.country">
+            <field name="country_id" ref="base.gl"/>
+        </record>
+        <record id="country_33" model="dvd_rental.country">
+            <field name="country_id" ref="base.va"/>
+        </record>
+        <record id="country_34" model="dvd_rental.country">
+            <field name="country_id" ref="base.hk"/>
+        </record>
+        <record id="country_35" model="dvd_rental.country">
+            <field name="country_id" ref="base.hu"/>
+        </record>
+        <record id="country_36" model="dvd_rental.country">
+            <field name="country_id" ref="base.in"/></record>
+        <record id="country_37" model="dvd_rental.country">
+            <field name="country_id" ref="base.id"/>
+        </record>
+        <record id="country_38" model="dvd_rental.country">
+            <field name="country_id" ref="base.ir"/>
+        </record>
+        <record id="country_39" model="dvd_rental.country">
+            <field name="country_id" ref="base.iq"/>
+        </record>
+        <record id="country_40" model="dvd_rental.country">
+            <field name="country_id" ref="base.il"/>
+        </record>
+    </data>
+</odoo>

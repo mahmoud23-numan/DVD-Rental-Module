@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem
+            id="dvd_rental_root_menu"
+            name="DVD Rental"
+            sequence="0"
+            web_icon="dvd_rental,static/description/dvd_icon.png"
+        />
+        <menuitem
+            id="catalog_main_menu"
+            name="Catalog"
+            sequence="1"
+            parent="dvd_rental_root_menu"
+        />
+        <menuitem
+            id="inventory_main_menu"
+            name="Inventory"
+            sequence="2"
+            parent="dvd_rental_root_menu"
+        />
+        <menuitem
+            id="rentals_main_menu"
+            name="Rentals"
+            sequence="3"
+            parent="dvd_rental_root_menu"
+        />
+        <menuitem
+            id="customers_main_menu"
+            name="Customers"
+            sequence="4"
+            parent="dvd_rental_root_menu"
+        />
+        <menuitem
+            id="staff_main_menu"
+            name="Staff"
+            sequence="5"
+            parent="dvd_rental_root_menu"
+        />
+
+    </data>
+</odoo>

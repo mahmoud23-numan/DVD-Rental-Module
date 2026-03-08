@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="staff_view_tree" model="ir.ui.view">
+            <field name="name">staff_view_tree</field>
+            <field name="model">dvd_rental.staff</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="first_name"/>
+                    <field name="last_name"/>
+                    <field name="address_id" optional="hide"/>
+                    <field name="email"/>
+                    <field name="store_id"/>
+                    <field name="active_bool"/>
+                    <field name="user_id" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+        <record id="staff_view_form" model="ir.ui.view">
+            <field name="name">staff_view_form</field>
+            <field name="model">dvd_rental.staff</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="picture" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="first_name" placeholder="First Name"/>
+                                <field name="last_name" placeholder="Last Name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Imp Info!">
+                                <field name="address_id"/>
+                                <field name="email"/>
+                                <field name="store_id"/>
+                                <field name="active" invisible="1"/>
+                                <field name="active_bool"/>
+                                <field name="user_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                        <field name="activity_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="staff_view_menu_action" model="ir.actions.act_window">
+            <field name="name">staff_view_menu_action</field>
+            <field name="res_model">dvd_rental.staff</field>
+            <field name="help" type="xml">
+                <p class="o_view_nocontent_smiling_face">
+                    Create First Record!
+                </p>
+            </field>
+        </record>
+        <menuitem
+            id="staff_view_menu"
+            name="Staff Members"
+            parent="staff_main_menu"
+            action="staff_view_menu_action"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="store_view_tree">
+            <field name="name">store_view_tree</field>
+            <field name="model">dvd_rental.store</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="title"/>
+                    <field name="address_id"/>
+                    <field name="manager_staff_id"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="store_view_form">
+            <field name="name">store_view_form</field>
+            <field name="model">dvd_rental.store</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="title"/>
+                            <field name="address_id"/>
+                            <field name="manager_staff_id"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                        <field name="activity_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="store_view_menu_action" model="ir.actions.act_window">
+            <field name="name">store_view_menu_action</field>
+            <field name="res_model">dvd_rental.store</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Your First Record!
+                </p>
+            </field>
+        </record>
+        <menuitem
+            id="store_view_menu"
+            name="Stores"
+            sequence="2"
+            parent="inventory_main_menu"
+            action="store_view_menu_action"/>
+    </data>
+</odoo>

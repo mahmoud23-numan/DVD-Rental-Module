@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="film_view_tree" model="ir.ui.view">
+            <field name="name">film_view_tree</field>
+            <field name="model">dvd_rental.film</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="title"/>
+                    <field name="release_year"/>
+                    <field name="description" optional="hide"/>
+                    <field name="language_id"/>
+                    <field name="replacement_cost" />
+                    <field name="special_feature_ids" widget="many2many_tags" optional="hide"/>
+                    <field name="actor_ids" widget="many2many_tags" optional="hide"/>
+                    <field name="category_ids" widget="many2many_tags" optional="hide"/>
+                    <field name="rental_duration"/>
+                    <field name="rental_rate"/>
+                    <field name="length"/>
+                    <field name="rating"/>
+                </tree>
+            </field>
+        </record>
+        <record id="film_view_form" model="ir.ui.view">
+            <field name="name">film_view_form</field>
+            <field name="model">dvd_rental.film</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group string="Imp Info!">
+                                <field name="title"/>
+                                <field name="release_year"/>
+                                <field name="description"/>
+                                <field name="language_id"/>
+                                <field name="replacement_cost"/>
+                                <field name="actor_ids" widget="many2many_tags"/>
+                                <field name="special_feature_ids" widget="many2many_tags"/>
+                                <field name="category_ids" widget="many2many_tags"/>
+                            </group>
+                            <group string="Additional Info!">
+                                <field name="rental_duration"/>
+                                <field name="rental_rate"/>
+                                <field name="length"/>
+                                <field name="rating"/>
+                                <field name="fulltext"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                        <field name="activity_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="film_view_menu_action" model="ir.actions.act_window">
+            <field name="name">film_view_menu_action</field>
+            <field name="res_model">dvd_rental.film</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Your First Record !
+                </p>
+            </field>
+        </record>
+        <menuitem
+            id="film_view_menu"
+            name="Films"
+            sequence="1"
+            parent="catalog_main_menu"
+            action="film_view_menu_action"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cust_1" model="dvd_rental.customer">
+            <field name="first_name">John</field>
+            <field name="last_name">Doe</field>
+            <field name="email">john.doe@example.com</field>
+        </record>
+
+        <record id="cust_2" model="dvd_rental.customer">
+            <field name="first_name">Jane</field>
+            <field name="last_name">Smith</field>
+            <field name="email">jane.smith@example.com</field>
+        </record>
+
+        <record id="cust_3" model="dvd_rental.customer">
+            <field name="first_name">Alice</field>
+            <field name="last_name">Johnson</field>
+            <field name="email">alice.j@example.com</field>
+        </record>
+
+        <record id="cust_4" model="dvd_rental.customer">
+            <field name="first_name">Robert</field>
+            <field name="last_name">Brown</field>
+            <field name="email">r.brown@example.com</field>
+        </record>
+
+        <record id="cust_5" model="dvd_rental.customer">
+            <field name="first_name">Michael</field>
+            <field name="last_name">Davis</field>
+            <field name="email">m.davis@example.com</field>
+        </record>
+
+        <record id="cust_6" model="dvd_rental.customer">
+            <field name="first_name">Emily</field>
+            <field name="last_name">Wilson</field>
+            <field name="email">e.wilson@example.com</field>
+        </record>
+
+        <record id="cust_7" model="dvd_rental.customer">
+            <field name="first_name">William</field>
+            <field name="last_name">Miller</field>
+            <field name="email">w.miller@example.com</field>
+        </record>
+
+        <record id="cust_8" model="dvd_rental.customer">
+            <field name="first_name">Sophia</field>
+            <field name="last_name">Moore</field>
+            <field name="email">sophia.m@example.com</field>
+        </record>
+
+        <record id="cust_9" model="dvd_rental.customer">
+            <field name="first_name">James</field>
+            <field name="last_name">Taylor</field>
+            <field name="email">j.taylor@example.com</field>
+        </record>
+
+        <record id="cust_10" model="dvd_rental.customer">
+            <field name="first_name">Olivia</field>
+            <field name="last_name">Anderson</field>
+            <field name="email">olivia.a@example.com</field>
+        </record>
+
+        <record id="cust_11" model="dvd_rental.customer">
+            <field name="first_name">David</field>
+            <field name="last_name">Thomas</field>
+            <field name="email">d.thomas@example.com</field>
+        </record>
+
+        <record id="cust_12" model="dvd_rental.customer">
+            <field name="first_name">Emma</field>
+            <field name="last_name">Jackson</field>
+            <field name="email">emma.j@example.com</field>
+        </record>
+
+        <record id="cust_13" model="dvd_rental.customer">
+            <field name="first_name">Daniel</field>
+            <field name="last_name">White</field>
+            <field name="email">d.white@example.com</field>
+        </record>
+
+        <record id="cust_14" model="dvd_rental.customer">
+            <field name="first_name">Ava</field>
+            <field name="last_name">Harris</field>
+            <field name="email">ava.h@example.com</field>
+        </record>
+
+        <record id="cust_15" model="dvd_rental.customer">
+            <field name="first_name">Joseph</field>
+            <field name="last_name">Martin</field>
+            <field name="email">j.martin@example.com</field>
+        </record>
+
+        <record id="cust_16" model="dvd_rental.customer">
+            <field name="first_name">Mia</field>
+            <field name="last_name">Thompson</field>
+            <field name="email">mia.t@example.com</field>
+        </record>
+
+        <record id="cust_17" model="dvd_rental.customer">
+            <field name="first_name">Thomas</field>
+            <field name="last_name">Garcia</field>
+            <field name="email">t.garcia@example.com</field>
+        </record>
+
+        <record id="cust_18" model="dvd_rental.customer">
+            <field name="first_name">Isabella</field>
+            <field name="last_name">Martinez</field>
+            <field name="email">i.martinez@example.com</field>
+        </record>
+
+        <record id="cust_19" model="dvd_rental.customer">
+            <field name="first_name">Christopher</field>
+            <field name="last_name">Robinson</field>
+            <field name="email">c.robinson@example.com</field>
+        </record>
+
+        <record id="cust_20" model="dvd_rental.customer">
+            <field name="first_name">Charlotte</field>
+            <field name="last_name">Clark</field>
+            <field name="email">c.clark@example.com</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="film_academy_dinosaur" model="dvd_rental.film">
+            <field name="title">Academy Dinosaur</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">6</field>
+            <field name="rental_rate">3</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_action'), ref('category_drama')])]"/>
+        </record>
+
+        <record id="film_ace_goldfinger" model="dvd_rental.film">
+            <field name="title">Ace Goldfinger</field>
+            <field name="language_id" ref="lang_italian"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">4</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_classics')])]"/>
+        </record>
+
+        <record id="film_adaptation_holes" model="dvd_rental.film">
+            <field name="title">Adaptation Holes</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_comedy'), ref('category_family')])]"/>
+        </record>
+
+        <record id="film_affair_prejudice" model="dvd_rental.film">
+            <field name="title">Affair Prejudice</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">5</field>
+            <field name="rental_rate">3</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_drama')])]"/>
+        </record>
+
+        <record id="film_african_egg" model="dvd_rental.film">
+            <field name="title">African Egg</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">6</field>
+            <field name="rental_rate">2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_documentary')])]"/>
+        </record>
+
+        <record id="film_agent_truman" model="dvd_rental.film">
+            <field name="title">Agent Truman</field>
+            <field name="language_id" ref="lang_japanese"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_action'), ref('category_sci_fi')])]"/>
+        </record>
+
+        <record id="film_airplane_sierra" model="dvd_rental.film">
+            <field name="title">Airplane Sierra</field>
+            <field name="language_id" ref="lang_mandarin"/>
+            <field name="rental_duration">6</field>
+            <field name="rental_rate">4</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_travel')])]"/>
+        </record>
+
+        <record id="film_alabama_devil" model="dvd_rental.film">
+            <field name="title">Alabama Devil</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_horror')])]"/>
+        </record>
+
+        <record id="film_aladdin_calendar" model="dvd_rental.film">
+            <field name="title">Aladdin Calendar</field>
+            <field name="language_id" ref="lang_german"/>
+            <field name="rental_duration">6</field>
+            <field name="rental_rate">4</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_animation'), ref('category_children')])]"/>
+        </record>
+
+        <record id="film_alamo_videotape" model="dvd_rental.film">
+            <field name="title">Alamo Videotape</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">3</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_sports')])]"/>
+        </record>
+        <record id="film_11" model="dvd_rental.film">
+            <field name="title">Alaska Phantom</field>
+            <field name="description">A phantom saga set in alaska with a chef and hunter.</field>
+            <field name="release_year">2006-05-10</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">2</field>
+            <field name="length">120</field>
+            <field name="replacement_cost">19.99</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'alaska':1 'chef':12 'hunter':8 'must':14</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_new')])]"/>
+        </record>
+
+        <record id="film_12" model="dvd_rental.film">
+            <field name="title">Date Speed</field>
+            <field name="description">A fast speed discovery with a moose.</field>
+            <field name="release_year">2006-06-15</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">3</field>
+            <field name="length">85</field>
+            <field name="replacement_cost">14.99</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'speed':2 'discov':14 'moos':11</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_games'), ref('category_music')])]"/>
+        </record>
+
+        <record id="film_20" model="dvd_rental.film">
+            <field name="title">Wyatt Archive</field>
+            <field name="description">A documentary about archives and explorers.</field>
+            <field name="release_year">2006-12-01</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">5</field>
+            <field name="length">150</field>
+            <field name="replacement_cost">25.50</field>
+            <field name="rating">nc-17</field>
+            <field name="fulltext">'archiv':1 'explor':12 'documentari':5</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_documentary'), ref('category_classics')])]"/>
+        </record><record id="film_11" model="dvd_rental.film">
+            <field name="title">Alaska Phantom</field>
+            <field name="description">A phantom saga set in alaska with a chef and hunter.</field>
+            <field name="release_year">2006-05-10</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">2</field>
+            <field name="length">120</field>
+            <field name="replacement_cost">19.99</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'alaska':1 'chef':12 'hunter':8 'must':14</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_new')])]"/>
+        </record>
+
+        <record id="film_12" model="dvd_rental.film">
+            <field name="title">Date Speed</field>
+            <field name="description">A fast speed discovery with a moose.</field>
+            <field name="release_year">2006-06-15</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">3</field>
+            <field name="length">85</field>
+            <field name="replacement_cost">14.99</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'speed':2 'discov':14 'moos':11</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_games'), ref('category_music')])]"/>
+        </record>
+
+        <record id="film_20" model="dvd_rental.film">
+            <field name="title">Wyatt Archive</field>
+            <field name="description">A documentary about archives and explorers.</field>
+            <field name="release_year">2006-12-01</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">5</field>
+            <field name="length">150</field>
+            <field name="replacement_cost">25.50</field>
+            <field name="rating">nc-17</field>
+            <field name="fulltext">'archiv':1 'explor':12 'documentari':5</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_documentary'), ref('category_classics')])]"/>
+        </record><record id="film_11" model="dvd_rental.film">
+            <field name="title">Alaska Phantom</field>
+            <field name="description">A phantom saga set in alaska with a chef and hunter.</field>
+            <field name="release_year">2006-05-10</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">2</field>
+            <field name="length">120</field>
+            <field name="replacement_cost">19.99</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'alaska':1 'chef':12 'hunter':8 'must':14</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_new')])]"/>
+        </record>
+
+        <record id="film_12" model="dvd_rental.film">
+            <field name="title">Date Speed</field>
+            <field name="description">A fast speed discovery with a moose.</field>
+            <field name="release_year">2006-06-15</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">3</field>
+            <field name="length">85</field>
+            <field name="replacement_cost">14.99</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'speed':2 'discov':14 'moos':11</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_games'), ref('category_music')])]"/>
+        </record>
+
+        <record id="film_20" model="dvd_rental.film">
+            <field name="title">Wyatt Archive</field>
+            <field name="description">A documentary about archives and explorers.</field>
+            <field name="release_year">2006-12-01</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">5</field>
+            <field name="length">150</field>
+            <field name="replacement_cost">25.50</field>
+            <field name="rating">nc-17</field>
+            <field name="fulltext">'archiv':1 'explor':12 'documentari':5</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_documentary'), ref('category_classics')])]"/>
+        </record><record id="film_11" model="dvd_rental.film">
+            <field name="title">Alaska Phantom</field>
+            <field name="description">A phantom saga set in alaska with a chef and hunter.</field>
+            <field name="release_year">2006-05-10</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">2</field>
+            <field name="length">120</field>
+            <field name="replacement_cost">19.99</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'alaska':1 'chef':12 'hunter':8 'must':14</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_new')])]"/>
+        </record>
+
+        <record id="film_12" model="dvd_rental.film">
+            <field name="title">Date Speed</field>
+            <field name="description">A fast speed discovery with a moose.</field>
+            <field name="release_year">2006-06-15</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">3</field>
+            <field name="length">85</field>
+            <field name="replacement_cost">14.99</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'speed':2 'discov':14 'moos':11</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_games'), ref('category_music')])]"/>
+        </record>
+
+        <record id="film_20" model="dvd_rental.film">
+            <field name="title">Wyatt Archive</field>
+            <field name="description">A documentary about archives and explorers.</field>
+            <field name="release_year">2006-12-01</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">5</field>
+            <field name="length">150</field>
+            <field name="replacement_cost">25.50</field>
+            <field name="rating">nc-17</field>
+            <field name="fulltext">'archiv':1 'explor':12 'documentari':5</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_documentary'), ref('category_classics')])]"/>
+        </record><record id="film_11" model="dvd_rental.film">
+            <field name="title">Alaska Phantom</field>
+            <field name="description">A phantom saga set in alaska with a chef and hunter.</field>
+            <field name="release_year">2006-05-10</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">2</field>
+            <field name="length">120</field>
+            <field name="replacement_cost">19.99</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'alaska':1 'chef':12 'hunter':8 'must':14</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_new')])]"/>
+        </record>
+
+        <record id="film_12" model="dvd_rental.film">
+            <field name="title">Date Speed</field>
+            <field name="description">A fast speed discovery with a moose.</field>
+            <field name="release_year">2006-06-15</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">3</field>
+            <field name="length">85</field>
+            <field name="replacement_cost">14.99</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'speed':2 'discov':14 'moos':11</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_games'), ref('category_music')])]"/>
+        </record>
+
+        <record id="film_20" model="dvd_rental.film">
+            <field name="title">Wyatt Archive</field>
+            <field name="description">A documentary about archives and explorers.</field>
+            <field name="release_year">2006-12-01</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">5</field>
+            <field name="length">150</field>
+            <field name="replacement_cost">25.50</field>
+            <field name="rating">nc-17</field>
+            <field name="fulltext">'archiv':1 'explor':12 'documentari':5</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_documentary'), ref('category_classics')])]"/>
+        </record>vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv<record id="film_11" model="dvd_rental.film">
+            <field name="title">Alaska Phantom</field>
+            <field name="description">A phantom saga set in alaska with a chef and hunter.</field>
+            <field name="release_year">2006-05-10</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">2</field>
+            <field name="length">120</field>
+            <field name="replacement_cost">19.99</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'alaska':1 'chef':12 'hunter':8 'must':14</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_new')])]"/>
+        </record>
+
+        <record id="film_12" model="dvd_rental.film">
+            <field name="title">Date Speed</field>
+            <field name="description">A fast speed discovery with a moose.</field>
+            <field name="release_year">2006-06-15</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">3</field>
+            <field name="length">85</field>
+            <field name="replacement_cost">14.99</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'speed':2 'discov':14 'moos':11</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_games'), ref('category_music')])]"/>
+        </record>
+
+        <record id="film_20" model="dvd_rental.film">
+            <field name="title">Wyatt Archive</field>
+            <field name="description">A documentary about archives and explorers.</field>
+            <field name="release_year">2006-12-01</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">5</field>
+            <field name="length">150</field>
+            <field name="replacement_cost">25.50</field>
+            <field name="rating">nc-17</field>
+            <field name="fulltext">'archiv':1 'explor':12 'documentari':5</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_documentary'), ref('category_classics')])]"/>
+        </record><record id="film_11" model="dvd_rental.film">
+            <field name="title">Alaska Phantom</field>
+            <field name="description">A phantom saga set in alaska with a chef and hunter.</field>
+            <field name="release_year">2006-05-10</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">2</field>
+            <field name="length">120</field>
+            <field name="replacement_cost">19.99</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'alaska':1 'chef':12 'hunter':8 'must':14</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_new')])]"/>
+        </record>
+
+        <record id="film_12" model="dvd_rental.film">
+            <field name="title">Date Speed</field>
+            <field name="description">A fast speed discovery with a moose.</field>
+            <field name="release_year">2006-06-15</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">3</field>
+            <field name="length">85</field>
+            <field name="replacement_cost">14.99</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'speed':2 'discov':14 'moos':11</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_games'), ref('category_music')])]"/>
+        </record>
+
+        <record id="film_20" model="dvd_rental.film">
+            <field name="title">Wyatt Archive</field>
+            <field name="description">A documentary about archives and explorers.</field>
+            <field name="release_year">2006-12-01</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">5</field>
+            <field name="length">150</field>
+            <field name="replacement_cost">25.50</field>
+            <field name="rating">nc-17</field>
+            <field name="fulltext">'archiv':1 'explor':12 'documentari':5</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_documentary'), ref('category_classics')])]"/>
+        </record><record id="film_11" model="dvd_rental.film">
+            <field name="title">Alaska Phantom</field>
+            <field name="description">A phantom saga set in alaska with a chef and hunter.</field>
+            <field name="release_year">2006-05-10</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">2</field>
+            <field name="length">120</field>
+            <field name="replacement_cost">19.99</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'alaska':1 'chef':12 'hunter':8 'must':14</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_new')])]"/>
+        </record>
+
+        <record id="film_12" model="dvd_rental.film">
+            <field name="title">Date Speed</field>
+            <field name="description">A fast speed discovery with a moose.</field>
+            <field name="release_year">2006-06-15</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">3</field>
+            <field name="length">85</field>
+            <field name="replacement_cost">14.99</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'speed':2 'discov':14 'moos':11</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_games'), ref('category_music')])]"/>
+        </record>
+
+        <record id="film_20" model="dvd_rental.film">
+            <field name="title">Wyatt Archive</field>
+            <field name="description">A documentary about archives and explorers.</field>
+            <field name="release_year">2006-12-01</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">5</field>
+            <field name="length">150</field>
+            <field name="replacement_cost">25.50</field>
+            <field name="rating">nc-17</field>
+            <field name="fulltext">'archiv':1 'explor':12 'documentari':5</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_documentary'), ref('category_classics')])]"/>
+        </record><record id="film_11" model="dvd_rental.film">
+            <field name="title">Alaska Phantom</field>
+            <field name="description">A phantom saga set in alaska with a chef and hunter.</field>
+            <field name="release_year">2006-05-10</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">2</field>
+            <field name="length">120</field>
+            <field name="replacement_cost">19.99</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'alaska':1 'chef':12 'hunter':8 'must':14</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_new')])]"/>
+        </record>
+
+        <record id="film_12" model="dvd_rental.film">
+            <field name="title">Date Speed</field>
+            <field name="description">A fast speed discovery with a moose.</field>
+            <field name="release_year">2006-06-15</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">3</field>
+            <field name="length">85</field>
+            <field name="replacement_cost">14.99</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'speed':2 'discov':14 'moos':11</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_games'), ref('category_music')])]"/>
+        </record>
+
+        <record id="film_20" model="dvd_rental.film">
+            <field name="title">Wyatt Archive</field>
+            <field name="description">A documentary about archives and explorers.</field>
+            <field name="release_year">2006-12-01</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">5</field>
+            <field name="length">150</field>
+            <field name="replacement_cost">25.50</field>
+            <field name="rating">nc-17</field>
+            <field name="fulltext">'archiv':1 'explor':12 'documentari':5</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_documentary'), ref('category_classics')])]"/>
+        </record>
+        <record id="film_21" model="dvd_rental.film">
+            <field name="title">Atlantic Creator</field>
+            <field name="description">A creator story set in the atlantic ocean.</field>
+            <field name="release_year">2006-02-14</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">3</field>
+            <field name="length">100</field>
+            <field name="replacement_cost">20.00</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'atlant':1 'creat':2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_sci_fi')])]"/>
+        </record>
+
+        <record id="film_22" model="dvd_rental.film">
+            <field name="title">Berlin Balloon</field>
+            <field name="description">A trip in a balloon over berlin.</field>
+            <field name="release_year">2006-03-20</field>
+            <field name="language_id" ref="lang_german"/>
+            <field name="rental_duration">5</field>
+            <field name="rental_rate">2</field>
+            <field name="length">95</field>
+            <field name="replacement_cost">18.50</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'berlin':1 'baloon':2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_travel')])]"/>
+        </record>
+
+        <record id="film_23" model="dvd_rental.film">
+            <field name="title">Comedy Cat</field>
+            <field name="description">A funny story about a smart cat.</field>
+            <field name="release_year">2006-04-05</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">3</field>
+            <field name="length">70</field>
+            <field name="replacement_cost">12.00</field>
+            <field name="rating">pg-13</field>
+            <field name="fulltext">'comedi':1 'cat':2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_comedy')])]"/>
+        </record>
+
+        <record id="film_24" model="dvd_rental.film">
+            <field name="title">Drama Dog</field>
+            <field name="description">A sad drama featuring a lost dog.</field>
+            <field name="release_year">2006-05-12</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">6</field>
+            <field name="rental_rate">4</field>
+            <field name="length">110</field>
+            <field name="replacement_cost">15.00</field>
+            <field name="rating">r</field>
+            <field name="fulltext">'drama':1 'dog':2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_drama')])]"/>
+        </record>
+
+        <record id="film_25" model="dvd_rental.film">
+            <field name="title">Family Fun</field>
+            <field name="description">A great movie for the whole family.</field>
+            <field name="release_year">2006-06-01</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">2</field>
+            <field name="length">90</field>
+            <field name="replacement_cost">10.00</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'famili':1 'fun':2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_family'), ref('category_children')])]"/>
+        </record>
+
+        <record id="film_26" model="dvd_rental.film">
+            <field name="title">French Foreign</field>
+            <field name="description">A classic film in the french language.</field>
+            <field name="release_year">2006-07-20</field>
+            <field name="language_id" ref="lang_french"/>
+            <field name="rental_duration">3</field>
+            <field name="rental_rate">5</field>
+            <field name="length">130</field>
+            <field name="replacement_cost">22.00</field>
+            <field name="rating">nc-17</field>
+            <field name="fulltext">'french':1 'foreign':2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_foreign')])]"/>
+        </record>
+
+        <record id="film_27" model="dvd_rental.film">
+            <field name="title">Horror House</field>
+            <field name="description">A scary house full of ghosts.</field>
+            <field name="release_year">2006-08-15</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">4</field>
+            <field name="rental_rate">4</field>
+            <field name="length">95</field>
+            <field name="replacement_cost">17.00</field>
+            <field name="rating">r</field>
+            <field name="fulltext">'horror':1 'hous':2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_horror')])]"/>
+        </record>
+
+        <record id="film_28" model="dvd_rental.film">
+            <field name="title">Music Maker</field>
+            <field name="description">The story of a legendary music maker.</field>
+            <field name="release_year">2006-09-10</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">5</field>
+            <field name="rental_rate">3</field>
+            <field name="length">125</field>
+            <field name="replacement_cost">16.00</field>
+            <field name="rating">pg-13</field>
+            <field name="fulltext">'music':1 'maker':2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_music')])]"/>
+        </record>
+
+        <record id="film_29" model="dvd_rental.film">
+            <field name="title">Sci-Fi Star</field>
+            <field name="description">Travel to the stars in this epic sci-fi.</field>
+            <field name="release_year">2006-10-05</field>
+            <field name="language_id" ref="lang_mandarin"/>
+            <field name="rental_duration">6</field>
+            <field name="rental_rate">4</field>
+            <field name="length">140</field>
+            <field name="replacement_cost">24.00</field>
+            <field name="rating">pg</field>
+            <field name="fulltext">'sci-fi':1 'star':2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_sci_fi')])]"/>
+        </record>
+
+        <record id="film_30" model="dvd_rental.film">
+            <field name="title">Sports Star</field>
+            <field name="description">A sports documentary about stars.</field>
+            <field name="release_year">2006-11-20</field>
+            <field name="language_id" ref="lang_english"/>
+            <field name="rental_duration">7</field>
+            <field name="rental_rate">2</field>
+            <field name="length">115</field>
+            <field name="replacement_cost">13.50</field>
+            <field name="rating">g</field>
+            <field name="fulltext">'sport':1 'star':2</field>
+            <field name="category_ids" eval="[(6, 0, [ref('category_sports'), ref('category_documentary')])]"/>
+        </record>
+    </data>
+</odoo>
