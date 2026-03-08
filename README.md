@@ -26,6 +26,15 @@ This module implements a DVD rental management system in Odoo.
 - Store
 - Staff
 
+## Screenshots
+
+![dvd_one.png](screenshots/dvd_one.png)
+![dvd_two.png](screenshots/dvd_two.png)
+![dvd_three.png](screenshots/dvd_three.png)
+![dvd_four.png](screenshots/dvd_four.png)
+![dvd_five.png](screenshots/dvd_five.png)
+![dvd_six.png](screenshots/dvd_six.png)
+
 ## Installation
 
 1. Copy module to Odoo addons folder
