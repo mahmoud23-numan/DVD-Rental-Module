@@ -22,6 +22,7 @@
                     <board style="2-1">
                         <column>
                             <action string="Rental Statistics" name="%(dvd_rental.rentals_graph)d"/>
+                            <action string="Staff" name="%(dvd_rental.staff_view_menu_action)d"/>
                         </column>
                         <column>
                             <action string="Payment Statistics" name="%(dvd_rental.payment_graph)d"/>

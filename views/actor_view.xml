@@ -18,6 +18,17 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="git_all_film" icon="fa-star"
+                                    class="o_stat_button" type="object">
+                                <div class="o_stat_info">
+                                    <div class="o_stat_value">
+                                        <field name="film_count"/>
+                                    </div>
+                                    <span class="o_stat_text">Films</span>
+                                </div>
+                            </button>
+                        </div>
                         <group>
                             <field name="first_name" placeholder="eg.first name....."/>
                             <field name="last_name" placeholder="eg.first name....."/>

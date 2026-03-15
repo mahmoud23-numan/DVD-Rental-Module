@@ -19,10 +19,20 @@ class DvdRentalStaff(models.Model):
     user_id = fields.Many2one('res.users',string='User',tracking=True,readonly=True)
     picture = fields.Binary(string='Picture')
     store_id = fields.Many2one('dvd_rental.store', string='Store',tracking=True)
-
+    payment_count = fields.Integer(string='Payment Count',compute='_compute_payment_count')
     _sql_constraints = [
         ('email_unique', 'UNIQUE (email)', 'Email address must be unique'),
     ]
+
+    def _compute_payment_count(self):
+        for record in self:
+            count = self.env['dvd_rental.payment'].search_count([('staff_id','=',record.id)])
+            record.payment_count = count
+
+    def git_all_payment(self):
+        action = self.env['ir.actions.act_window']._for_xml_id('dvd_rental.payment_view_menu_action')
+        action['domain']=[('staff_id','=',self.id)]
+        return action
 
     @api.constrains('email')
     def _check_email(self):

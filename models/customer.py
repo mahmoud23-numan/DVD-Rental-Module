@@ -19,10 +19,21 @@ class DvdRentalCustomer(models.Model):
     active = fields.Boolean(default=True,tracking=True)
     address_id = fields.Many2one('dvd_rental.address', string='Address',tracking=True)
     store_id = fields.Many2one('dvd_rental.store', string='Store',tracking=True)
-
+    rental_count = fields.Integer(string='Rental Count',compute='_compute_count_rental')
     _sql_constraints = [
         ('email_unique','UNIQUE (email)','Email address must be unique'),
     ]
+
+    def _compute_count_rental(self):
+        for record in self:
+            count = self.env['dvd_rental.rental'].search_count([('customer_id','=',record.id)])
+            record.rental_count = count
+
+    def get_all_rentals(self):
+        action = self.env['ir.actions.act_window']._for_xml_id('dvd_rental.rental_view_menu_action')
+        action['domain'] = [('customer_id', '=', self.id)]
+        return action
+
     @api.depends('first_name', 'last_name')
     def _compute_display_name(self):
         for record in self:

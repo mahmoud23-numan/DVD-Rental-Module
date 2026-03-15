@@ -5,11 +5,11 @@
             <field name="name">customer_view_tree</field>
             <field name="model">dvd_rental.customer</field>
             <field name="arch" type="xml">
-                <tree>
+                <tree decoration-bf="1">
                     <field name="first_name"/>
                     <field name="last_name"/>
                     <field name="email"/>
-                    <field name="store_id"/>
+                    <field name="store_id" widget="badge"/>
                     <field name="active_bool"/>
                     <field name="address_id" optional="hide"/>
                     <field name="user_id" optional="hide"/>
@@ -22,6 +22,17 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="get_all_rentals" icon="fa-star"
+                                    class="oe_stat_button" type="object">
+                                <div class="o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="rental_count"/>
+                                    </span>
+                                    <span class="o_stat_text"> Rental</span>
+                                </div>
+                            </button>
+                        </div>
                         <group>
                             <group string="Imp Info!">
                                 <field name="first_name"/>
