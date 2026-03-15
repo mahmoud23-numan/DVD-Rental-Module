@@ -5,9 +5,9 @@
             <field name="name">inventory_view_tree</field>
             <field name="model">dvd_rental.inventory</field>
             <field name="arch" type="xml">
-                <tree>
-                    <field name="film_id"/>
-                    <field name="store_id"/>
+                <tree decoration-bf="1">
+                    <field name="film_id"  widget="badge" />
+                    <field name="store_id" widget="badge"/>
                 </tree>
             </field>
         </record>
@@ -18,8 +18,8 @@
                 <form>
                     <sheet>
                         <group>
-                            <field name="film_id"/>
-                            <field name="store_id"/>
+                            <field name="film_id"  options="{'no_open':True,'no_create':True,'no_create_edit':True}"/>
+                            <field name="store_id"  options="{'no_open':True,'no_create':True,'no_create_edit':True}"/>
                         </group>
                     </sheet>
                     <div class="oe_chatter">
@@ -30,9 +30,19 @@
                 </form>
             </field>
         </record>
+        <record model="ir.ui.view" id="inventory_view_search">
+            <field name="name">inventory_view_search</field>
+            <field name="model">dvd_rental.inventory</field>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="group_by_store" string="Store" context="{'group_by':'store_id'}"/>
+                </search>
+            </field>
+        </record>
         <record id="inventory_view_menu_action" model="ir.actions.act_window">
             <field name="name">store_view_menu_action</field>
             <field name="res_model">dvd_rental.inventory</field>
+            <field name="context">{'search_default_group_by_store': 1}</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create Your First Record!

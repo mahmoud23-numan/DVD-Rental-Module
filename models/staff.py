@@ -17,7 +17,7 @@ class DvdRentalStaff(models.Model):
     active = fields.Boolean(default=True,tracking=True)
     active_bool = fields.Boolean(default=True,tracking=True)
     user_id = fields.Many2one('res.users',string='User',tracking=True,readonly=True)
-    picture = fields.Binary(string='Picture',tracking=True)
+    picture = fields.Binary(string='Picture')
     store_id = fields.Many2one('dvd_rental.store', string='Store',tracking=True)
 
     _sql_constraints = [

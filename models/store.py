@@ -9,3 +9,5 @@ class DvdRentalStore(models.Model):
     title = fields.Char(string='Title',required=True,tracking=True)
     address_id = fields.Many2one('dvd_rental.address', string='Address',tracking=True)
     manager_staff_id = fields.Many2one('dvd_rental.staff', string='Manager',tracking=True)
+    staff_member = fields.One2many('dvd_rental.staff','store_id',string='Staff'
+                                   ,tracking=True)

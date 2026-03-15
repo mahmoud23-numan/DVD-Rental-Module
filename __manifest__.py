@@ -4,7 +4,7 @@
     'category': 'ERP Systems',
     'summary': 'DVD Rental',
     'author' : 'Mahmoud ApdelFattah Iprahim Numan',
-    'depends': ['base','mail'],
+    'depends': ['base','mail','board'],
     'data': [
         'security/ir.model.access.csv',
         'data/category_data.xml',
@@ -15,6 +15,7 @@
         'data/country_data.xml',
         'data/address_data.xml',
         'data/actor_data.xml',
+        'wizards/create_payment_wizard_view.xml',
         'views/base_menu_view.xml',
         'views/category_view.xml',
         'views/language_view.xml',
@@ -30,6 +31,11 @@
         'views/actor_view.xml',
         'views/rental_view.xml',
         'views/payment_view.xml',
+        'views/z_dashboard_view.xml',
+
     ],
+    'assets':{
+        'web.assets_backend':[]
+    },
     'application' : True,
 }

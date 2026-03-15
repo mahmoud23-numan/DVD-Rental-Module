@@ -1,5 +1,5 @@
 from odoo import api, fields, models
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 
 
 class DVDRentalFilm(models.Model):
@@ -13,9 +13,11 @@ class DVDRentalFilm(models.Model):
     release_year = fields.Date(string='Release Year',tracking=True)
     language_id = fields.Many2one('dvd_rental.language',string='Language',tracking=True)
     rental_duration = fields.Integer(string='Rental Duration',size=1,tracking=True)
-    rental_rate = fields.Integer(string='Rental Rate',tracking=True)
+    rental_rate = fields.Integer(string='Rental Rate',tracking=True,help="Rental Rate must be between 1 and 5")
     length = fields.Integer(string='Length',size=3,tracking=True)
-    replacement_cost = fields.Float(string='Replacement Cost',tracking=True)
+    replacement_cost = fields.Monetary(string='Replacement Cost',tracking=True,currency_field="currency_id")
+    currency_id = fields.Many2one('res.currency',
+                                  default=lambda self: self.env.ref('base.USD'))
     rating = fields.Selection([
         ('g', 'G'),
         ('pg', 'PG'),
@@ -27,8 +29,12 @@ class DVDRentalFilm(models.Model):
     fulltext = fields.Text(string='Full Text',tracking=True)
     category_ids = fields.Many2many('dvd_rental.category',string='Categories',tracking=True)
     actor_ids = fields.Many2many('dvd_rental.actor',string='Actors',tracking=True)
-
-
+    state = fields.Selection([
+        ('available', 'Available'),
+        ('borrowed', 'Borrowed'),
+        ('lost', 'Lost')
+    ],default='available',tracking=True,string='Current Availability')
+    is_linked_with_store = fields.Boolean(string='Is Linked With Store',default=False,readonly="1")
     _sql_constraints = [
         ('check_rental_rate','CHECK (rental_rate >= 1 OR rental_rate <= 5)','Rate Must Between 1 and 5'),
         ('check_rental_duration','CHECK (rental_rate >= 1 OR rental_rate <= 7)','Rental Duration Must Between 1 and 7'),
@@ -43,3 +49,9 @@ class DVDRentalFilm(models.Model):
     def _check_rental_duration(self):
         if self.rental_duration < 1 or self.rental_duration > 7:
             raise ValidationError("Rental Duration must be between 1 and 7")
+
+
+    def unlink(self):
+        for record in self:
+            if record.state == 'borrowed':
+                raise UserError("You cannot delete the Film because the current film is still in 'borrowed' status.")

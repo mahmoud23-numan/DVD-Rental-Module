@@ -12,4 +12,5 @@ access_dvd_rental_store,access_dvd_rental_store,model_dvd_rental_store,,1,1,1,1
 access_dvd_rental_inventory,access_dvd_rental_inventory,model_dvd_rental_inventory,,1,1,1,1
 access_dvd_rental_actor,access_dvd_rental_actor,model_dvd_rental_actor,,1,1,1,1
 access_dvd_rental_rental,access_dvd_rental_rental,model_dvd_rental_rental,,1,1,1,1
-access_dvd_rental_payment,access_dvd_rental_payment,model_dvd_rental_payment,,1,1,1,1
+access_dvd_rental_payment,access_dvd_rental_payment,model_dvd_rental_payment,,1,1,0,1
+access_wizard_create_payment_wizard,access_wizard_create_payment_wizard,model_wizard_create_payment_wizard,,1,1,1,1

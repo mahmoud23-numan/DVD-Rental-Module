@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="rentals_graph" model="ir.actions.act_window">
+            <field name="name">Rentals</field>
+            <field name="res_model">dvd_rental.rental</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="dvd_rental.rental_view_graph"/>
+        </record>
+        <record id="payment_graph" model="ir.actions.act_window">
+            <field name="name">Payment</field>
+            <field name="res_model">dvd_rental.payment</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="dvd_rental.payment_view_graph"/>
+        </record>
+        <record id="dashboard_view_form" model="ir.ui.view">
+            <field name="name">DashBoard Form </field>
+            <field name="model">board.board</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="DashBoard">
+                    <board style="2-1">
+                        <column>
+                            <action string="Rental Statistics" name="%(dvd_rental.rentals_graph)d"/>
+                        </column>
+                        <column>
+                            <action string="Payment Statistics" name="%(dvd_rental.payment_graph)d"/>
+                            <action string="Films Management" name="%(dvd_rental.film_view_menu_action)d"/>
+                        </column>
+                    </board>
+                </form>
+            </field>
+        </record>
+        <record id="dashboard_view_menu_action" model="ir.actions.act_window">
+            <field name="name">DashBoard</field>
+            <field name="res_model">board.board</field>
+            <field name="view_mode">form</field>
+            <field name="usage">menu</field>
+            <field name="view_id" ref="dashboard_view_form"/>
+        </record>
+        <menuitem
+            id="dashboard_view_menu"
+            name="DashBoard"
+            parent="dvd_rental_root_menu"
+            sequence="100"
+            action="dashboard_view_menu_action"/>
+    </data>
+</odoo>

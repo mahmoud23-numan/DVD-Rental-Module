@@ -1,24 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
+        <record id="film_view_kanban" model="ir.ui.view">
+            <field name="name">film_view_kanban</field>
+            <field name="model">dvd_rental.film</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile" sample="1">
+                    <field name="title"/>
+                    <field name="state"/>
+                    <field name="replacement_cost"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill o_kanban_card">
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="title"/>
+                                    </strong>
+                                    <div>
+                                        <span>Status:
+                                            <field name="state" widget="badge" decoration-danger="state =='borrowed'" decoration-success="state == 'available'"/>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        Cost: <field name="replacement_cost" widget="monetary" decoration-bf="1"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
         <record id="film_view_tree" model="ir.ui.view">
             <field name="name">film_view_tree</field>
             <field name="model">dvd_rental.film</field>
             <field name="arch" type="xml">
-                <tree>
-                    <field name="title"/>
-                    <field name="release_year"/>
-                    <field name="description" optional="hide"/>
-                    <field name="language_id"/>
-                    <field name="replacement_cost" />
-                    <field name="special_feature_ids" widget="many2many_tags" optional="hide"/>
-                    <field name="actor_ids" widget="many2many_tags" optional="hide"/>
+                <tree string="Films" sample="1" multi_edit="1">
+                    <field name="title" decoration-bf="1"/>
+                    <field name="release_year" optional="show"/>
+
+                    <field name="state" widget="badge"
+                           decoration-danger="state in ('lost', 'borrowed')"
+                           decoration-success="state == 'available'"/>
+
+                    <field name="replacement_cost" decoration-bf="1"/>
+                    <field name="currency_id" invisible="0" optional="hide"/>
+                    <field name="rental_rate"  />
+
+                    <field name="actor_ids" widget="many2many_tags" optional="show"/>
                     <field name="category_ids" widget="many2many_tags" optional="hide"/>
-                    <field name="rental_duration"/>
-                    <field name="rental_rate"/>
-                    <field name="length"/>
-                    <field name="rating"/>
+
+                    <field name="rental_duration" optional="show"/>
+                    <field name="length" widget="integer" optional="show"/>
+                    <field name="rating" optional="hide"/>
+                    <field name="language_id" optional="hide"/>
+                    <field name="is_linked_with_store" optional="hide"/>
                 </tree>
+
             </field>
         </record>
         <record id="film_view_form" model="ir.ui.view">
@@ -26,24 +64,31 @@
             <field name="model">dvd_rental.film</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
                     <sheet>
+                        <widget name="web_ribbon" title="Borrowed" bg_color="text-bg-danger" invisible="state != 'borrowed' "/>
+                        <widget name="web_ribbon" title="Available" bg_color="text-bg-success" invisible="state != 'available' "/>
                         <group>
                             <group string="Imp Info!">
                                 <field name="title"/>
                                 <field name="release_year"/>
                                 <field name="description"/>
-                                <field name="language_id"/>
+                                <field name="language_id" options="{'no_open':True,'no_create':True,'no_create_edit':True}"/>
                                 <field name="replacement_cost"/>
-                                <field name="actor_ids" widget="many2many_tags"/>
+                                <field name="actor_ids" widget="many2many_tags" options="{'no_open':True,'no_create':True,'no_create_edit':True}"/>
                                 <field name="special_feature_ids" widget="many2many_tags"/>
                                 <field name="category_ids" widget="many2many_tags"/>
                             </group>
                             <group string="Additional Info!">
                                 <field name="rental_duration"/>
-                                <field name="rental_rate"/>
+                                <field name="rental_rate" />
                                 <field name="length"/>
                                 <field name="rating"/>
+                                <field name="currency_id" invisible="1" />
                                 <field name="fulltext"/>
+                                <field name="is_linked_with_store" />
                             </group>
                         </group>
                     </sheet>
@@ -55,9 +100,21 @@
                 </form>
             </field>
         </record>
+        <record model="ir.ui.view" id="film_view_search">
+            <field name="name">film_view_search</field>
+            <field name="model">dvd_rental.film</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="title"/>
+                    <field name="actor_ids"/>
+                    <filter name="group_by_state" string="Availability" context="{'group_by':'state'}"/>
+                </search>
+            </field>
+        </record>
         <record id="film_view_menu_action" model="ir.actions.act_window">
             <field name="name">film_view_menu_action</field>
             <field name="res_model">dvd_rental.film</field>
+            <field name="view_mode">tree,form,kanban</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create Your First Record !
