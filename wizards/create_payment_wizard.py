@@ -43,3 +43,8 @@ class CreatePaymentWizard(models.TransientModel):
             self.rental_id.inventory_id.film_id.write({
                 'state':'borrowed',
             })
+
+
+
+
+

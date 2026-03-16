@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.module.category"  id="dvd_rental_category">
+            <field name="name">DVD RENTAL MANAGEMENT</field>
+            <field name="sequence">0</field>
+        </record>
+        <record model="res.groups" id="group_of_manager_dvd_rental">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="dvd_rental.dvd_rental_category"/>
+        </record>
+        <record model="res.groups" id="group_of_staff_dvd_rental">
+            <field name="name">Staff</field>
+            <field name="category_id" ref="dvd_rental.dvd_rental_category"/>
+        </record>
+        <record model="res.groups" id="group_of_customer_dvd_rental">
+            <field name="name">Customer</field>
+            <field name="category_id" ref="dvd_rental.dvd_rental_category"/>
+        </record>
+    </data>
+</odoo>

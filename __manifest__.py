@@ -6,6 +6,7 @@
     'author' : 'Mahmoud ApdelFattah Iprahim Numan',
     'depends': ['base','mail','board'],
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'data/category_data.xml',
         'data/special_feature_data.xml',
@@ -15,6 +16,7 @@
         'data/country_data.xml',
         'data/address_data.xml',
         'data/actor_data.xml',
+        'reports/payment_report.xml',
         'wizards/create_payment_wizard_view.xml',
         'views/base_menu_view.xml',
         'views/category_view.xml',

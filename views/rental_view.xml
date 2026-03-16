@@ -61,6 +61,14 @@
                         <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_print_payment_receipt" type="object" class="o_stat_button"
+                                    string="Print Receipt" invisible="state != 'borrowed'" icon="fa-print">
+                                <div class="o_stat_info" >
+                                    <span class="o_stat_text">Print Receipt</span>
+                                </div>
+                            </button>
+                        </div>
                         <widget name="web_ribbon" title="Overdue" bg_color="text-bg-danger" invisible="state != 'overdue' "/>
                         <widget name="web_ribbon" title="Returned" bg_color="text-bg-info" invisible="state != 'returned' "/>
                         <widget name="web_ribbon" title="Borrowed" bg_color="text-bg-success" invisible="state != 'borrowed' "/>

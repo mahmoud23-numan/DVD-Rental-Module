@@ -33,6 +33,14 @@ class DvdRentalRental(models.Model):
         ('check_days','CHECK(amount >= 0)','Days Can Not In Past'),
     ]
 
+    def action_print_payment_receipt(self):
+        self.ensure_one()
+        payment = self.env['dvd_rental.payment'].search([('rental_id','=',self.id)], limit=1)
+        if not payment:
+            raise UserError("No payment record exists for this rental.")
+
+        return self.env.ref('dvd_rental.payment_report_action').report_action(payment)
+
     def check_date_of_rental(self):
         today = fields.Date.today()
         overdue_rentals= self.search([
@@ -103,3 +111,5 @@ class DvdRentalRental(models.Model):
                 raise UserError("You cannot delete the rental history because the current film is still in 'borrowed' status.")
 
         return super(DvdRentalRental, self).unlink()
+
+

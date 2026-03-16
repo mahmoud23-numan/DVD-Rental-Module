@@ -10,6 +10,8 @@ This module implements a DVD rental management system in Odoo.
 - Manage Customers
 - Rental Management
 - Payment Tracking
+- Print Reports 
+- DashBoard
 
 ## Models
 
@@ -34,6 +36,9 @@ This module implements a DVD rental management system in Odoo.
 ![dvd_four.png](screenshots/dvd_four.png)
 ![dvd_five.png](screenshots/dvd_five.png)
 ![dvd_six.png](screenshots/dvd_six.png)
+![dvd_6.png](screenshots/dvd_6.png)
+![dvd_7.png](screenshots/dvd_7.png)
+![dvd_8.png](screenshots/dvd_8.png)
 
 ## Installation
 
